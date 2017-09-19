@@ -19,29 +19,77 @@
           <div class="flex-auto"></div>
         </div>
         <div>
-          <h3 id="fader"></h3>
+          <h3 id="fader">Get married</h3>
         </div>
       </div>
       <div class="flex-auto"></div>
     </div>
 
-    <div class="full-height flex flex-column bg-blue">
-      <div class="flex-auto"></div>
-      <div class="white flex-center">
-        <h1>Venue</h1>
+    <div class="full-height flex bg-blue">
+      <div id="map"></div>
+      <div class="white flex flex-column flex-center flex-auto">
+        <div class="flex-auto"></div>
+        <div class="flex-wrap">
+          <h2>When</h2>
+          <h4>October 40th, 2018</h4>
+          <h2>Where</h2>
+          <h4>
+            The Gowanus Canal
+            <br/>
+            Brooklyn, NY
+          </h4>
+          <a class="btn">RSVP</a>
+        </div>
+        <div class="flex-auto"></div>
       </div>
-      <div class="flex-auto"></div>
     </div>
 
     <div class="full-height flex flex-column bg-silver">
       <div class="flex-auto"></div>
-      <div class="white flex-center">
-        <h1>Venue</h1>
+      <div class="flex space-around">
+        <div class="white flex-center flex-wrap m1">
+          <h2>Place A</h2>
+          <h4>
+            This is the address
+            <br />
+            Brooklyn, NY
+            <br />
+            (609)-867-5309
+            <br />
+            <a href="https://www.google.com/maps/place/Holiday+Inn+Express+New+York-Brooklyn/@40.6781893,-73.9846578,19.34z/data=!4m5!3m4!1s0x0:0xec1d8876a95786c7!8m2!3d40.678161!4d-73.9844307" target="_blank">View Map</a>
+          </h4>
+        </div>
+        <div class="white flex-center flex-wrap m1">
+          <h2>Place B</h2>
+          <h4>
+            This is the address
+            <br />
+            Brooklyn, NY
+            <br />
+            (609)-867-5309
+            <br />
+            <a href="https://www.google.com/maps/place/Holiday+Inn+Express+New+York-Brooklyn/@40.6781893,-73.9846578,19.34z/data=!4m5!3m4!1s0x0:0xec1d8876a95786c7!8m2!3d40.678161!4d-73.9844307" target="_blank">View Map</a>
+          </h4>
+        </div>
+        <div class="white flex-center flex-wrap m1">
+          <h2>Place C</h2>
+          <h4>
+            This is the address
+            <br />
+            Brooklyn, NY
+            <br />
+            (609)-867-5309
+            <br />
+            <a href="https://www.google.com/maps/place/Holiday+Inn+Express+New+York-Brooklyn/@40.6781893,-73.9846578,19.34z/data=!4m5!3m4!1s0x0:0xec1d8876a95786c7!8m2!3d40.678161!4d-73.9844307" target="_blank">View Map</a>
+          </h4>
+        </div>
       </div>
       <div class="flex-auto"></div>
     </div>
 
     <script type="application/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="application/javascript" src="/script.js"></script>
+    <script type="application/javascript" src="/map.js"></script>
+    <script async defer src="/google-maps?callback=initMap"></script>
   </body>
 </html>

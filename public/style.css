@@ -15,9 +15,7 @@ h1 {
   margin: 0;
   text-shadow: 2px 2px #000000;
 }
-h3 {
-  text-shadow: 2px 2px #000000;
-}
+h3 {text-shadow: 2px 2px #000000;}
 a {
   text-decoration: none;
   color: white;
@@ -35,12 +33,19 @@ a:hover {color: burlywood;}
   width: 100%;
   height: 100%;
 }
+#map {
+  height: 100vh;
+  width: 70%;
+}
 
 /* formatting */
 .full-height {height: 100%;}
 .relative {position: relative;}
 .absolute {position: absolute;}
 .inline-block {display: inline-block;}
+.col-3 {min-width: 33.3%;}
+.mt0 {margin-top: 0px;}
+.m1 {margin: 1em;}
 
 /* flex */
 .flex {display: flex;}
@@ -51,7 +56,10 @@ a:hover {color: burlywood;}
   min-width: 0;
   min-height: 0;
 }
-.flex-justify  { justify-content: space-between }
+.flex-justify  {justify-content: space-between;}
+.space-around {justify-content: space-around;}
+.flex-responsive {display: flex;}
+.flex-wrap {flex-wrap: wrap;}
 
 /* font color */
 .white {color: white;}
@@ -61,6 +69,23 @@ a:hover {color: burlywood;}
 .bg-silver {background-color: #9da8be;}
 .bg-white {background-color: white;}
 
+/* buttons */
+.btn {
+  cursor: pointer;
+  border: 1px solid white;
+  padding: 0.5em 3em;
+  /* text-shadow: 2px 2px #000000; */
+  letter-spacing: 0.3em;
+  -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -o-transition: background-color 1s;
+  transition: background-color 1s;
+}
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+
 /* custom */
 .tk-underline {
   height: 2px;
@@ -69,4 +94,11 @@ a:hover {color: burlywood;}
   -moz-animation: uline 1s forwards;
   -ms-animation: uline 1s forwards;
   -o-animation: uline 1s forwards;
+}
+
+/* responsive */
+@media screen and (max-width: 680px) {
+  #map {display: none;}
+  .col-3 {min-width: 100%;}
+  .flex-responsive {flex-direction: column;}
 }
