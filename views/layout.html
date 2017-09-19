@@ -4,7 +4,114 @@
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width initial-scale=1.0'>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="/style.css" />
+    <!-- <link type="text/css" rel="stylesheet" href="/style.css" /> -->
+    <style>
+/* animations */
+@keyframes uline {
+  0% {width: 0px;}
+  100% {width: 200px;}
+}
+
+/* tags */
+body {
+  font-family: 'Open Sans', arial, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+h1 {
+  margin: 0;
+  text-shadow: 2px 2px #000000;
+}
+h3 {text-shadow: 2px 2px #000000;}
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {color: burlywood;}
+
+/* ids */
+#nav {margin: 3% 25%;}
+#main {
+  background: url(pugs.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+#map {
+  height: 100vh;
+  width: 70%;
+}
+
+/* formatting */
+.full-height {height: 100%;}
+.relative {position: relative;}
+.absolute {position: absolute;}
+.inline-block {display: inline-block;}
+.col-3 {min-width: 33.3%;}
+.mt0 {margin-top: 0px;}
+.m1 {margin: 1em;}
+
+/* flex */
+.flex {display: flex;}
+.flex-column {flex-direction: column;}
+.flex-center {text-align: center;}
+.flex-auto {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+}
+.flex-justify  {justify-content: space-between;}
+.space-around {justify-content: space-around;}
+.flex-responsive {display: flex;}
+.flex-wrap {flex-wrap: wrap;}
+
+/* font color */
+.white {color: white;}
+
+/* background color */
+.bg-blue {background-color: #171831;}
+.bg-silver {background-color: #9da8be;}
+.bg-white {background-color: white;}
+
+/* buttons */
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid white;
+  padding: 0.5em 3em;
+  /* text-shadow: 2px 2px #000000; */
+  letter-spacing: 0.3em;
+  -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -o-transition: background-color 1s;
+  transition: background-color 1s;
+}
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+
+/* custom */
+.tk-underline {
+  height: 2px;
+  animation: uline 1s forwards;
+  -webkit-animation: uline 1s forwards;
+  -moz-animation: uline 1s forwards;
+  -ms-animation: uline 1s forwards;
+  -o-animation: uline 1s forwards;
+}
+
+/* responsive */
+@media screen and (max-width: 680px) {
+  #map {display: none;}
+  .col-3 {min-width: 100%;}
+  .flex-responsive {flex-direction: column;}
+}
+    </style>
     <title>Chris &amp; Tom</title>
   </head>
   <body>
