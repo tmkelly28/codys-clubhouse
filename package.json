@@ -1,0 +1,23 @@
+{
+  "name": "codys-clubhouse",
+  "version": "1.0.0",
+  "description": "Chris and I are getting married, this is our wedding website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "NODE_ENV='development' nodemon index.js -e js,html,css",
+    "deploy": "git checkout -b deploy && git commit --allow-empty -m 'Deploying' && git push --force heroku deploy:master && git checkout master && git branch -D deploy"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "morgan": "^1.8.2",
+    "nunjucks": "^3.0.1"
+  }
+}

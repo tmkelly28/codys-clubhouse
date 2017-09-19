@@ -1,0 +1,91 @@
+/* animations */
+@keyframes uline {
+  0% {width: 0px;}
+  100% {width: 200px;}
+}
+
+@keyframes slide {
+  0% {transform: translateX(-100%);}
+  25% {transform: translateX(0%);}
+  85% {transform: translateX(0%);}
+  90% {display: none;}
+  100% {transform: translateX(100%);}
+}
+
+/* tags */
+body {
+  font-family: 'Open Sans', arial, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+h1 {margin: 0;}
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {color: burlywood;}
+
+/* ids */
+#nav {margin: 3% 25%;}
+
+/* formatting */
+.full-height {height: 100%;}
+.relative {position: relative;}
+.absolute {position: absolute;}
+.inline-block {display: inline-block;}
+
+/* flex */
+.flex {display: flex;}
+.flex-column {flex-direction: column;}
+.flex-center {text-align: center;}
+.flex-auto {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+}
+.flex-justify  { justify-content: space-between }
+
+/* font color */
+.white {color: white;}
+
+/* background color */
+.bg-black {background-color: black;}
+.bg-blue {background-color: blue;}
+.bg-red {background-color: red;}
+.bg-white {background-color: white;}
+
+/* custom */
+.tk-underline {
+  height: 1px;
+  animation: uline 1s forwards;
+  -webkit-animation: uline 1s forwards;
+}
+
+.slide1 {
+  animation: slide 5s forwards;
+  -webkit-animation: slide 5s forwards;
+}
+.slide2 {
+  left: -100%;
+  animation: slide 5s forwards;
+  -webkit-animation: slide 5s forwards;
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+}
+.slide3 {
+  left: -100%;
+  animation: slide 5s forwards;
+  -webkit-animation: slide 5s forwards;
+  -webkit-animation-delay: 8s;
+  animation-delay: 8s;
+}
+/* .slide4 { */
+/*   left: -100%; */
+/*   animation: slide 5s forwards; */
+/*   -webkit-animation: slide 5s forwards; */
+/* } */
+/* .slide5 { */
+/*   left: -100%; */
+/*   animation: slide 5s; */
+/* } */
