@@ -8,12 +8,11 @@ const axios = require('axios')
 const accomodations = require('./accomodations')
 const PORT = process.env.PORT || 8080
 const DEV = process.env.NODE_ENV === 'development'
+
+if (process.env.NODE_ENV !== 'production') require('./env')
 const MAP_URL = `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAPS_KEY}&callback=initMap`
 
 nunjucks.configure('views')
-
-if (process.env.NODE_ENV !== 'production') require('./env')
-
 
 module.exports = express()
   .use(morgan('dev'))
