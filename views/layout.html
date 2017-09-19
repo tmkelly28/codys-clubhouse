@@ -33,7 +33,9 @@ a:hover {color: burlywood;}
 /* ids */
 #nav {margin: 3% 25%;}
 #main {
-  background: url(pugs-optimized.jpg) no-repeat center center fixed;
+  background: url('pugs-optimized.jpg') center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -43,7 +45,7 @@ a:hover {color: burlywood;}
 }
 #map {
   height: 100vh;
-  width: 70%;
+  width: 60%;
 }
 
 /* formatting */
@@ -109,15 +111,13 @@ a:hover {color: burlywood;}
 @media screen and (max-width: 680px) {
   #map {display: none;}
   #accomodations {height: auto;}
-  #accomodations div.flex {
-    flex-direction: column;
-  }
+  #accomodations div.flex {flex-direction: column;}
   .col-3 {min-width: 100%;}
   .flex-responsive {flex-direction: column;}
 }
 
 @media screen and (max-width: 276px) {
-  #main {background: url(pugs-optimized.jpg) no-repeat center center fixed;}
+  #main {background: url('pugs-optimized.jpg') no-repeat center center fixed;}
 }
     </style>
     <title>Chris &amp; Tom</title>
