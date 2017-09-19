@@ -4,7 +4,6 @@
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width initial-scale=1.0'>
     <link async href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <!-- <link type="text/css" rel="stylesheet" href="/style.css" /> -->
     <style>
 /* animations */
 @keyframes uline {
@@ -108,8 +107,16 @@ a:hover {color: burlywood;}
 /* responsive */
 @media screen and (max-width: 680px) {
   #map {display: none;}
+  #accomodations {height: auto;}
+  #accomodations div.flex {
+    flex-direction: column;
+  }
   .col-3 {min-width: 100%;}
   .flex-responsive {flex-direction: column;}
+}
+
+@media screen and (max-width: 276px) {
+  #main {background: url(pugs.jpeg) no-repeat center center fixed;}
 }
     </style>
     <title>Chris &amp; Tom</title>
