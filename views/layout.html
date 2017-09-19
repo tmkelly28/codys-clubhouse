@@ -32,17 +32,22 @@ a:hover {color: burlywood;}
 
 /* ids */
 #nav {margin: 3% 25%;}
-#main {
+#main:after {
+  /* https://stackoverflow.com/questions/24154666/background-size-cover-not-working-on-ios/43058483#43058483 */
+  content: "";
+  position: fixed; /* stretch a fixed position to the whole screen */
+  top: 0;
+  height: 100vh; /* fix for mobile browser address bar appearing disappearing */
+  left: 0;
+  right: 0;
+  z-index:-1; /* needed to keep in the background */
   background: url('pugs-optimized.jpg') center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  width: 100%;
-  height: 100%;
 }
+
 #map {
   height: 100vh;
   width: 60%;
