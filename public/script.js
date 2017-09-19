@@ -2,7 +2,8 @@
   var quips = [
     'Get married',
     'Are really excited about filing jointly',
-    'Totally aren\'t being forced to do this'
+    'Totally aren\'t being forced to do this',
+    'Pug tested, Cody approved'
   ]
   var len = quips.length
   var max = len * 10

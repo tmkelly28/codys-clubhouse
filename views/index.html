@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-<div id="main-img" class="full-height flex flex-column">
+<div class="full-height flex flex-column" id="main">
   <div class="flex-auto"></div>
   <div class="white flex-center">
     <h1>Chris &amp; Tom</h1>
@@ -17,27 +17,36 @@
   <div class="flex-auto"></div>
 </div>
 
-<div class="full-height flex bg-blue">
+<div class="full-height flex bg-blue" id="venue">
   <div id="map"></div>
   <div class="white flex flex-column flex-center flex-auto">
     <div class="flex-auto"></div>
-    <div class="flex-wrap">
-      <h2>When</h2>
-      <h4>October 40th, 2018</h4>
-      <h2>Where</h2>
-      <h4>
-        The Gowanus Canal
-        <br/>
-        Brooklyn, NY
-      </h4>
-      <a class="btn">RSVP</a>
+    <div class="flex flex-column flex-wrap">
+      <div>
+        <h2>When</h2>
+        <h4>October 40th, 2018</h4>
+      </div>
+      <div>
+        <h2>Where</h2>
+        <h4>
+          The Gowanus Canal
+          <br/>
+          Brooklyn, NY
+        </h4>
+      </div>
+      <div>
+        <a class="btn">RSVP</a>
+      </div>
     </div>
     <div class="flex-auto"></div>
   </div>
 </div>
 
-<div class="full-height flex flex-column bg-silver">
+<div class="full-height flex flex-column bg-silver" id="accomodations">
   <div class="flex-auto"></div>
+  <div class="white flex-center flex-wrap">
+    <h2>Accomodations</h2>
+  </div>
   <div class="flex space-around">
     {% for place in accomodations %}
       <div class="white flex-center flex-wrap m1">
@@ -48,12 +57,25 @@
           {{place.city}}
           <br />
           {{place.phone}}
-          <br />
-          <a href={{place.href}} target="_blank">View Map</a>
         </h4>
+        <div>
+          <a class="btn" href={{place.href}} target="_blank">Map</a>
+        </div>
       </div>
     {% endfor %}
   </div>
   <div class="flex-auto"></div>
 </div>
+
+<div class="full-height flex bg-blue" id="registry">
+  <div class="white flex flex-column flex-center flex-auto">
+    <div class="flex-auto"></div>
+    <div class="flex-wrap">
+      <h2>Registry</h2>
+      <h4>In lieu of gifts, please consider making a donation to one of these organizations.</h4>
+    </div>
+    <div class="flex-auto"></div>
+  </div>
+</div>
+
 {% endblock %}
