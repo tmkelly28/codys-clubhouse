@@ -3,7 +3,12 @@
     'Get married',
     'Are really excited about filing jointly',
     'Totally aren\'t being forced to do this',
-    'Pug tested, Cody approved'
+    'Pug tested, Cody approved',
+    'Lowered expectations, increased ABV',
+    'Are both Cody\'s real dad',
+    'Sponsored by...beer',
+    'What\'s next? Cats marrying dogs?',
+    'Ruin marriage for the rest of us'
   ]
   var len = quips.length
   var max = len * 10
