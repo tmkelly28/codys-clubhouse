@@ -117,8 +117,12 @@ a:hover {color: burlywood;}
   #map {display: none;}
   #accomodations {height: auto;}
   #accomodations div.flex {flex-direction: column;}
-  .col-3 {min-width: 100%;}
-  .flex-responsive {flex-direction: column;}
+}
+
+@media screen and (max-width: 680px), screen and (max-height: 325px) {
+  #map {display: none;}
+  #venue {height: auto;}
+  #venue .btn {margin-bottom: 2em;}
 }
     </style>
     <title>Chris &amp; Tom</title>
