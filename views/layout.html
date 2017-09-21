@@ -47,10 +47,13 @@ a:hover {color: burlywood;}
   -o-background-size: cover;
   background-size: cover;
 }
-
 #map {
   height: 100vh;
   width: 60%;
+}
+#rsvp-form {
+  display: none;
+  height: auto;
 }
 
 /* formatting */
@@ -61,8 +64,11 @@ a:hover {color: burlywood;}
 .col-3 {min-width: 33.3%;}
 .mt0 {margin-top: 0px;}
 .m1 {margin: 1em;}
+.block {display: block;}
+.left {text-align: left;}
 
 /* flex */
+/* based on: http://basscss.com/v7/docs/flex-object/ */
 .flex {display: flex;}
 .flex-column {flex-direction: column;}
 .flex-center {text-align: center;}
@@ -75,6 +81,119 @@ a:hover {color: burlywood;}
 .space-around {justify-content: space-around;}
 .flex-responsive {display: flex;}
 .flex-wrap {flex-wrap: wrap;}
+
+/* fields */
+/* based on: http://basscss.com/v7/docs/base-forms/ */
+/*           http://basscss.com/v7/docs/color-forms/ */
+input,
+select,
+textarea,
+fieldset {
+  font-family: var(--form-field-font-family);
+  font-size: var(--form-field-font-size);
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+label {
+  vertical-align: middle;
+  margin-bottom: 0.1em;
+}
+
+input[type=text],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=time],
+input[type=url],
+input[type=week] {
+  height: var(--form-field-height);
+  /* padding: var(--form-field-padding-y) var(--form-field-padding-x); */
+  vertical-align: middle;
+  -webkit-appearance: none;
+}
+
+select {
+  line-height: 1.75;
+  padding: var(--form-field-padding-y) var(--form-field-padding-x);
+}
+
+select:not([multiple]) {
+  height: var(--form-field-height);
+  vertical-align: middle;
+}
+
+textarea {
+  line-height: 1.75;
+  padding: var(--form-field-padding-y) var(--form-field-padding-x);
+}
+
+.field {
+  /* border-style: solid; */
+  /* border-width: var(--border-width); */
+  /* border-color: var(--border-color); */
+  /* border-radius: var(--border-radius); */
+  padding: 0.3em;
+  border-radius: 5px;
+  border-style: none;
+  margin-bottom: 1em;
+}
+
+.field:focus,
+.field.is-focused {
+  outline: none;
+  border-color: var(--field-focus-color);
+  box-shadow: 0 0 0 2px color(var(--field-focus-color) a(.5));
+}
+
+.field:disabled,
+.field.is-disabled {
+  background-color: var(--darken-2);
+  opacity: .5;
+}
+
+.field:read-only:not(select),
+.field.is-read-only {
+  background-color: var(--darken-2);
+}
+
+
+.field.is-success {
+  border-color: var(--field-success-color);
+}
+
+.field.is-success:focus,
+.field.is-success.is-focused {
+  box-shadow: 0 0 0 2px color(var(--field-success-color) a(.5));
+}
+
+.field.is-warning {
+  border-color: var(--field-warning-color);
+}
+
+.field.is-warning:focus,
+.field.is-warning.is-focused {
+  box-shadow: 0 0 0 2px color(var(--field-warning-color) a(.5));
+}
+
+.field:invalid,
+.field.is-error {
+  border-color: var(--field-error-color);
+}
+
+.field:invalid:focus,
+.field:invalid.is-focused,
+.field.is-error:focus,
+.field.is-error.is-focused {
+  box-shadow: 0 0 0 2px color(var(--field-error-color) a(.5));
+}
 
 /* font color */
 .white {color: white;}

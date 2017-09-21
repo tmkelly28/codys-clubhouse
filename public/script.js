@@ -24,6 +24,25 @@
   }
 
   $(function () {
+    var $main = $('#main-wrapper')
+    var $rsvp = $('#rsvp')
+    var $rsvpForm = $('#rsvp-form')
+    var $back = $('#back')
+    var $form = $('form')
+    $rsvp.on('click', function () {
+      $main.fadeOut(function () {
+        $rsvpForm.fadeIn()
+      })
+    })
+    $back.on('click', function () {
+      $rsvpForm.fadeOut(function () {
+        $main.fadeIn()
+      })
+    })
+    $form.on('submit', function (event) {
+      event.preventDefault()
+      console.log(event.target.going[0].value)
+    })
     main($('#fader'), 0)
   })
 })(window.$)
