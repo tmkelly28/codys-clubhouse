@@ -30,7 +30,11 @@ module.exports = express()
       .catch(next)
   })
   .use(express.static(join(__dirname, 'public')))
-  .use('*', (req, res) => res.render('index', {accomodations}))
+  .get('/', (req, res) => res.render('index', {accomodations}))
+  .post('/rsvp', (req, res) => {
+    console.log(req.body)
+    res.json({okay: true})
+  })
   .use((err, req, res, next) => {
     console.error(err)
     console.error(err.stack)

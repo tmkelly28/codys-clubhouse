@@ -20,7 +20,7 @@
 
   <div class="full-height flex bg-blue" id="venue">
     <div id="map"></div>
-    <div class="white flex flex-column flex-center flex-auto" id="venue-detail">
+    <div class="full-height white flex flex-column flex-center flex-auto" id="venue-detail">
       <div class="flex-auto"></div>
       <div class="flex flex-column flex-wrap">
         <div>
@@ -103,8 +103,8 @@
 
       <div class="flex flex-justify m1">
         <label for="going">Are you going?</label>
-        <input type="radio" name="going" />Yes</br>
-        <input type="radio" name="going" />No</br>
+        <input type="radio" name="going" value="yes" required />Yes</br>
+        <input type="radio" name="going" value="no" required />No</br>
       </div>
 
       <div class="flex flex-justify flex-wrap">
@@ -123,13 +123,30 @@
         <textarea class="field" name="message"></textarea>
       </div>
 
-      <div>
-        <button type="submit" class="btn" id="submit">Submit</button>
-      </div>
-      <div>
-        <a class="btn" id="back">Back</a>
+      <div class="flex flex-justify flex-wrap">
+        <a class="btn m1 flex-grow back-btn">Back</a>
+        <a type="submit" class="btn m1 flex-grow" id="submit">Submit</a>
       </div>
     </form>
+    <div class="flex-auto"></div>
+  </div>
+</div>
+
+<div class="white flex flex-column flex-center flex-auto bg-blue" id="going">
+  <div class="full-height flex flex-column">
+    <div class="flex-auto"></div>
+    <div class="flex">
+      <div class="flex-auto"></div>
+      <div class="flex flex-column">
+        <div>
+          <h2 id="going-message"></h2>
+        </div>
+        <div>
+          <a class="btn m1 flex-grow back-btn">Back</a>
+        </div>
+      </div>
+      <div class="flex-auto"></div>
+    </div>
     <div class="flex-auto"></div>
   </div>
 </div>
