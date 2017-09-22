@@ -38,12 +38,14 @@
     var $goingMessage = $('#going-message')
     $rsvp.on('click', function () {
       $main.fadeOut(function () {
+        $rsvpForm.scrollTop()
         $rsvpForm.fadeIn()
       })
     })
     $back.on('click', function () {
       $going.fadeOut()
       $rsvpForm.fadeOut(function () {
+        $main.scrollTop()
         $main.fadeIn()
       })
     })
