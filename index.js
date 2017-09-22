@@ -32,7 +32,6 @@ module.exports = express()
   .use(express.static(join(__dirname, 'public')))
   .get('/', (req, res) => res.render('index', {accomodations}))
   .post('/rsvp', (req, res) => {
-    console.log(req.body)
     res.json({okay: true})
   })
   .use((err, req, res, next) => {
