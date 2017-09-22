@@ -28,6 +28,7 @@
   }
 
   $(function () {
+    var $body = $('body')
     var $main = $('#main-wrapper')
     var $rsvp = $('#rsvp')
     var $rsvpForm = $('#rsvp-form')
@@ -38,14 +39,13 @@
     var $goingMessage = $('#going-message')
     $rsvp.on('click', function () {
       $main.fadeOut(function () {
-        $rsvpForm.scrollTop()
+        $body.scrollTop()
         $rsvpForm.fadeIn()
       })
     })
     $back.on('click', function () {
       $going.fadeOut()
       $rsvpForm.fadeOut(function () {
-        $main.scrollTop()
         $main.fadeIn()
       })
     })
