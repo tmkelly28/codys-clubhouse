@@ -86,25 +86,30 @@
     <form class="flex flex-column">
 
       <div class="flex flex-column m1">
-        <label class="left" for="email">Email</label>
+        <label class="left" for="email">* Email</label>
         <input class="field" type="email" name="email" />
       </div>
 
+
       <div class="flex flex-justify flex-wrap">
         <div class="flex flex-column m1 flex-grow">
-          <label class="left" for="firstName1">First Name</label>
+          <label class="left" for="firstName1">* First Name</label>
           <input class="field" type="text" name="firstName1" />
         </div>
         <div class="flex flex-column m1 flex-grow">
-          <label class="left" for="lastName1">Last Name</label>
+          <label class="left" for="lastName1">* Last Name</label>
           <input class="field" type="text" name="lastName1" />
         </div>
       </div>
 
       <div class="flex flex-justify m1">
-        <label for="going">Are you going?</label>
-        <input type="radio" name="going" value="yes" required />Yes</br>
-        <input type="radio" name="going" value="no" required />No</br>
+        <label for="going">* Are you going?</label>
+        <input type="radio" name="going" value="yes" checked />Yes</br>
+        <input type="radio" name="going" value="no" />No</br>
+      </div>
+
+      <div class="left">
+        <h5>Plus One</h5>
       </div>
 
       <div class="flex flex-justify flex-wrap">

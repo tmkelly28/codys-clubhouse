@@ -39,7 +39,7 @@
     var $goingMessage = $('#going-message')
     $rsvp.on('click', function () {
       $main.fadeOut(function () {
-        $body.scrollTop()
+        window.scrollTo(0, 0)
         $rsvpForm.fadeIn()
       })
     })
