@@ -28,7 +28,6 @@
   }
 
   $(function () {
-    var $body = $('body')
     var $main = $('#main-wrapper')
     var $rsvp = $('#rsvp')
     var $rsvpForm = $('#rsvp-form')
