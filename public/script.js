@@ -34,6 +34,10 @@
     var $rsvpForm = $('#rsvp-form')
     var $back = $('.back-btn')
     var $form = $('form')
+    var $yesGoing = $('#yes-going')
+    var $yesRadio = $yesGoing.children('input')
+    var $noGoing = $('#no-going')
+    var $noRadio = $noGoing.children('input')
     var $submit = $('#submit')
     var $going = $('#going')
     var $goingMessage = $('#going-message')
@@ -49,11 +53,23 @@
         $main.fadeIn()
       })
     })
+    $yesGoing.on('click', function () {
+      $yesRadio.prop('checked', true)
+      $yesGoing.addClass('yes-going')
+      $noRadio.prop('checked', false)
+      $noGoing.removeClass('no-going')
+    })
+    $noGoing.on('click', function () {
+      $yesRadio.prop('checked', false)
+      $yesGoing.removeClass('yes-going')
+      $noRadio.prop('checked', true)
+      $noGoing.addClass('no-going')
+    })
     $submit.on('click', function () {
       var data = $form.serializeArray()
       $.post('/rsvp', data)
         .then(function () {
-          $goingMessage.text(goingStatus[data[3].value])
+          $goingMessage.text(goingStatus[data[2].value])
           $rsvpForm.fadeOut(function () {
             $going.fadeIn()
           })

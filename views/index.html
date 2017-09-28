@@ -95,10 +95,18 @@
         <input class="field" type="text" name="party" />
       </div>
 
-      <div class="flex flex-justify m1">
+      <div class="flex flex-column m1">
         <label for="going">* Are you going?</label>
-        <input type="radio" name="going" value="yes" checked />Yes</br>
-        <input type="radio" name="going" value="no" />No</br>
+        <div id="radio-buttons" class="flex flex-justify m1">
+          <a id="yes-going" class="flex-auto btn yes-going">
+            <input type="radio" style="display:none" name="going" value="yes" checked />
+            <span>Yes</span>
+          </a>
+          <a id="no-going" class="flex-auto btn">
+            <input type="radio" style="display:none" name="going" value="no" />
+            <span>No</span>
+          </a>
+        </div>
       </div>
 
       <div class="flex flex-column m1">

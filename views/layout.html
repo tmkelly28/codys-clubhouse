@@ -229,6 +229,46 @@ textarea {
   color: black;
 }
 
+/* radio */
+#radio-buttons {
+  padding: 0;
+}
+#radio-buttons a {
+  list-style-type: none;
+}
+#radio-buttons a {
+  border: 1px solid;
+  padding: 5px;
+  -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -o-transition: background-color 1s;
+  transition: background-color 1s;
+}
+#radio-buttons a:first-child {
+  margin-right: 1em;
+}
+#radio-buttons a:first-child:hover {
+  border-color: green;
+  background-color: green;
+}
+#radio-buttons a:nth-child(2) {
+  margin-left: 1em;
+}
+#radio-buttons a:nth-child(2):hover {
+  border-color: red;
+  background-color: red;
+}
+.yes-going {
+  color: black !important;
+  border-color: green !important;
+  background-color: green !important;
+}
+.no-going {
+  color: black !important;
+  border-color: red !important;
+  background-color: red !important;
+}
+
 /* custom */
 .tk-underline {
   height: 2px;
