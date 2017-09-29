@@ -33,6 +33,8 @@
     var $rsvpForm = $('#rsvp-form')
     var $back = $('.back-btn')
     var $form = $('form')
+    var $email = $('#email')
+    var $party = $('#party')
     var $yesGoing = $('#yes-going')
     var $yesRadio = $yesGoing.children('input')
     var $noGoing = $('#no-going')
@@ -40,6 +42,9 @@
     var $submit = $('#submit')
     var $going = $('#going')
     var $goingMessage = $('#going-message')
+    function formValid () {
+      return $email.val() && $party.val()
+    }
     $rsvp.on('click', function () {
       $main.fadeOut(function () {
         window.scrollTo(0, 0)
@@ -64,7 +69,11 @@
       $noRadio.prop('checked', true)
       $noGoing.addClass('no-going')
     })
+    $form.on('change', function (evt) {
+      formValid() ? $submit.removeClass('disabled') : $submit.addClass('disabled')
+    })
     $submit.on('click', function () {
+      if (!formValid()) return
       var data = $form.serializeArray()
       $.post('/rsvp', data)
         .then(function () {
