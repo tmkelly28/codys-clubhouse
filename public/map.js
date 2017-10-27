@@ -1,5 +1,5 @@
 function initMap () {
-  var gowanus = {lat: 40.6704531, lng: -74.0152036}
+  var greenwood = {lat: 40.6588982, lng: -73.9818774}
   var styles = [
     {
       'featureType': 'landscape.natural',
@@ -73,11 +73,11 @@ function initMap () {
   ]
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 14,
-    center: gowanus,
+    center: greenwood,
     styles: styles
   })
   var marker = new google.maps.Marker({
-    position: gowanus,
+    position: greenwood,
     map: map
   })
 }
