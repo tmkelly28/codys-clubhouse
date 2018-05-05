@@ -1,7 +1,7 @@
 CREATE TABLE invites(
   id SERIAL PRIMARY KEY,
-  email TEXT NOT NULL,
-  party TEXT NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  party VARCHAR(255) NOT NULL,
   going BOOLEAN NOT NULL,
   message TEXT
 )

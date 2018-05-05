@@ -1,0 +1,298 @@
+/* animations */
+@keyframes uline {
+  0% {width: 0px;}
+  100% {width: 200px;}
+}
+
+/* tags */
+body {
+  font-family: 'Open Sans', arial, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+h1 {
+  margin: 0;
+  text-shadow: 2px 2px #000000;
+}
+h3 {text-shadow: 2px 2px #000000;}
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {color: burlywood;}
+
+/* ids */
+#nav {margin: 3% 25%;}
+#main:after {
+  /* https://stackoverflow.com/questions/24154666/background-size-cover-not-working-on-ios/43058483#43058483 */
+  content: "";
+  position: fixed; /* stretch a fixed position to the whole screen */
+  top: 0;
+  height: 100vh; /* fix for mobile browser address bar appearing disappearing */
+  left: 0;
+  right: 0;
+  z-index:-1; /* needed to keep in the background */
+  background: url('pugs-optimized.jpg') center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#map {
+  height: 100vh;
+  width: 60%;
+}
+#rsvp-form {
+  display: none;
+  height: auto;
+  min-height: 100vh;
+}
+#going {
+  display: none;
+  height: 100vh;
+}
+
+/* formatting */
+.full-height {height: 100%;}
+.relative {position: relative;}
+.absolute {position: absolute;}
+.inline-block {display: inline-block;}
+.col-3 {min-width: 33.3%;}
+.mt0 {margin-top: 0px;}
+.m1 {margin: 1em;}
+.block {display: block;}
+.left {text-align: left;}
+
+/* flex */
+/* based on: http://basscss.com/v7/docs/flex-object/ */
+.flex {display: flex;}
+.flex-column {flex-direction: column;}
+.flex-center {text-align: center;}
+.flex-auto {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+}
+.flex-justify  {justify-content: space-between;}
+.space-around {justify-content: space-around;}
+.flex-responsive {display: flex;}
+.flex-wrap {flex-wrap: wrap;}
+.flex-grow {flex-grow: 1;}
+
+/* fields */
+/* based on: http://basscss.com/v7/docs/base-forms/ */
+/*           http://basscss.com/v7/docs/color-forms/ */
+input,
+select,
+textarea,
+fieldset {
+  font-family: var(--form-field-font-family);
+  font-size: var(--form-field-font-size);
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+label {
+  vertical-align: middle;
+  margin-bottom: 0.1em;
+}
+
+input[type=text],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=time],
+input[type=url],
+input[type=week] {
+  height: var(--form-field-height);
+  /* padding: var(--form-field-padding-y) var(--form-field-padding-x); */
+  vertical-align: middle;
+  -webkit-appearance: none;
+  background-color: #fafafa;
+}
+
+select {
+  line-height: 1.75;
+  padding: var(--form-field-padding-y) var(--form-field-padding-x);
+}
+
+select:not([multiple]) {
+  height: var(--form-field-height);
+  vertical-align: middle;
+}
+
+textarea {
+  line-height: 1.75;
+  padding: var(--form-field-padding-y) var(--form-field-padding-x);
+  background-color: #fafafa;
+}
+
+.field {
+  /* border-style: solid; */
+  /* border-width: var(--border-width); */
+  /* border-color: var(--border-color); */
+  /* border-radius: var(--border-radius); */
+  border: 1px solid #cccccc;
+  padding: 12px;
+  border-radius: 2px;
+  margin-bottom: 1em;
+}
+
+.field:focus,
+.field.is-focused {
+  outline: none;
+  border-color: var(--field-focus-color);
+  box-shadow: 0 0 0 2px color(var(--field-focus-color) a(.5));
+  background-color: #ffffff;
+}
+
+.field:disabled,
+.field.is-disabled {
+  background-color: var(--darken-2);
+  opacity: .5;
+}
+
+.field:read-only:not(select),
+.field.is-read-only {
+  background-color: var(--darken-2);
+}
+
+
+.field.is-success {
+  border-color: var(--field-success-color);
+}
+
+.field.is-success:focus,
+.field.is-success.is-focused {
+  box-shadow: 0 0 0 2px color(var(--field-success-color) a(.5));
+}
+
+.field.is-warning {
+  border-color: var(--field-warning-color);
+}
+
+.field.is-warning:focus,
+.field.is-warning.is-focused {
+  box-shadow: 0 0 0 2px color(var(--field-warning-color) a(.5));
+}
+
+.field:invalid,
+.field.is-error {
+  border-color: var(--field-error-color);
+}
+
+.field:invalid:focus,
+.field:invalid.is-focused,
+.field.is-error:focus,
+.field.is-error.is-focused {
+  box-shadow: 0 0 0 2px color(var(--field-error-color) a(.5));
+}
+
+/* font color */
+.white {color: white;}
+
+/* background color */
+.bg-blue {background-color: #171831;}
+.bg-silver {background-color: #9da8be;}
+.bg-white {background-color: white;}
+
+/* buttons */
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid white;
+  padding: 0.5em 3em;
+  letter-spacing: 0.3em;
+  -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -o-transition: background-color 1s;
+  transition: background-color 1s;
+}
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+.disabled {
+  border-color: gray;
+  color: gray;
+}
+.disabled:hover {
+  background-color: transparent;
+  color: gray;
+}
+
+/* radio */
+#radio-buttons {
+  padding: 0;
+}
+#radio-buttons a {
+  list-style-type: none;
+}
+#radio-buttons a {
+  border: 1px solid;
+  padding: 5px;
+  -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -o-transition: background-color 1s;
+  transition: background-color 1s;
+}
+#radio-buttons a:first-child {
+  margin-right: 1em;
+}
+#radio-buttons a:first-child:hover {
+  border-color: green;
+  background-color: green;
+}
+#radio-buttons a:nth-child(2) {
+  margin-left: 1em;
+}
+#radio-buttons a:nth-child(2):hover {
+  border-color: red;
+  background-color: red;
+}
+.yes-going {
+  color: black !important;
+  border-color: green !important;
+  background-color: green !important;
+}
+.no-going {
+  color: black !important;
+  border-color: red !important;
+  background-color: red !important;
+}
+
+/* custom */
+.tk-underline {
+  height: 2px;
+  animation: uline 1s forwards;
+  -webkit-animation: uline 1s forwards;
+  -moz-animation: uline 1s forwards;
+  -ms-animation: uline 1s forwards;
+  -o-animation: uline 1s forwards;
+}
+
+/* responsive */
+@media screen and (max-width: 680px) {
+  #map {display: none;}
+  #accomodations {height: auto;}
+  #accomodations div.flex {flex-direction: column;}
+  #venue-detail {height: 100vh;}
+}
+
+@media screen and (max-width: 680px), screen and (max-height: 325px) {
+  #map {display: none;}
+  #venue {height: auto;}
+  #venue .btn {margin-bottom: 2em;}
+}
+
+@media screen and (max-height: 330px) {
+  #venue-detail {height: auto;}
+}
