@@ -1,6 +1,6 @@
 function initMap () {
   var greenwood = {lat: 40.6588982, lng: -73.9818774}
-  var dumbo = {lat: 40.7100734, lng: 73.996616}
+  var dumbo = {lat: 40.704301, lng: -73.987734}
   var styles = [
     {
       'featureType': 'landscape.natural',
