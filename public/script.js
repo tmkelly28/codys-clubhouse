@@ -2,13 +2,16 @@
   var quips = [
     'Get married',
     'Are really excited about filing jointly',
+    'Lowered expectations, increased ABV',
     'Totally aren\'t being forced to do this',
     'Pug tested, Cody approved',
-    'Lowered expectations, increased ABV',
-    'Are both Cody\'s real dad',
-    'Sponsored by...beer',
+    'Sponsored by...beer?',
     'What\'s next? Cats marrying dogs?',
-    'Ruin marriage for the rest of us'
+    'Are both Cody\'s real dad',
+    'And you thought you\'d seen everything',
+    'Ruin marriage for the rest of us',
+    'Remember to tip your bartender!',
+    'Are you still reading these? It restarts after this one'
   ]
   var goingStatus = {
     yes: 'Yay! See you there!',
