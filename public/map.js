@@ -1,5 +1,6 @@
 function initMap () {
   var greenwood = {lat: 40.6588982, lng: -73.9818774}
+  var dumbo = {lat: 40.7100734, lng: 73.996616}
   var styles = [
     {
       'featureType': 'landscape.natural',
@@ -71,13 +72,23 @@ function initMap () {
       ]
     }
   ]
-  var map = new google.maps.Map(document.getElementById('map'), {
+  var map1 = new google.maps.Map(document.getElementById('map-1'), {
+    zoom: 14,
+    center: dumbo,
+    styles: styles
+  })
+  var marker1 = new google.maps.Marker({
+    position: dumbo,
+    map: map1
+  })
+
+  var map2 = new google.maps.Map(document.getElementById('map-2'), {
     zoom: 14,
     center: greenwood,
     styles: styles
   })
-  var marker = new google.maps.Marker({
+  var marker2 = new google.maps.Marker({
     position: greenwood,
-    map: map
+    map: map2
   })
 }

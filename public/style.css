@@ -39,9 +39,8 @@ a:hover {color: burlywood;}
   -o-background-size: cover;
   background-size: cover;
 }
-#map {
-  height: 100vh;
-  width: 60%;
+.map {
+  width: 50%;
 }
 #rsvp-form {
   display: none;
@@ -63,6 +62,8 @@ a:hover {color: burlywood;}
 .m1 {margin: 1em;}
 .block {display: block;}
 .left {text-align: left;}
+.vh70 {height: 70vh;}
+.vh100 {height: 100vh;}
 
 /* flex */
 /* based on: http://basscss.com/v7/docs/flex-object/ */
@@ -285,14 +286,14 @@ textarea {
 
 /* responsive */
 @media screen and (max-width: 680px) {
-  #map {display: none;}
+  .map {display: none;}
   #accomodations {height: auto;}
   #accomodations div.flex {flex-direction: column;}
   #venue-detail {height: 100vh;}
 }
 
 @media screen and (max-width: 680px), screen and (max-height: 325px) {
-  #map {display: none;}
+  .map {display: none;}
   #venue {height: auto;}
   #venue .btn {margin-bottom: 2em;}
 }

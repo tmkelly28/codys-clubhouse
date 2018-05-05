@@ -18,31 +18,50 @@
     <div class="flex-auto"></div>
   </div>
 
-  <div class="full-height flex bg-blue" id="venue">
-    <div id="map"></div>
-    <div class="full-height white flex flex-column flex-center flex-auto" id="venue-detail">
-      <div class="flex-auto"></div>
-      <div class="flex flex-column flex-wrap">
-        <div>
-          <h2>When</h2>
-          <h4>September 29th, 2018</h4>
-          <h4>Cocktail hour starts at 5pm</h4>
-          <h4>Ceremony at 6pm!!</h4>
+  <div class="flex flex-column bg-blue" id="venue">
+    <div class="flex vh70">
+      <div class="white flex flex-column flex-center flex-auto" id="venue-detail">
+        <div class="flex-auto"></div>
+        <div class="flex flex-column flex-wrap">
+          <div>
+            <p><i>Here early? Join us for dinner and drinks!</i></p>
+            <div>September 28th, 2018, starting at 7pm</div>
+            <p>Randolph Beer DUMBO</p>
+            <div>RSVP by email or phone</div>
+            <div>susie.k.krone@gmail.com</div>
+            <div>(609)-617-4365</div>
+          </div>
         </div>
-        <div>
-          <h2>Where</h2>
-          <h4>
-            Greenwood Park
-            <br/>
-            Brooklyn, NY
-          </h4>
-        </div>
-        <div class="m1">
-          {# <span>Check back soon for more info!</span> #}
-          <a class="btn" id="rsvp">RSVP</a>
-        </div>
+        <div class="flex-auto"></div>
       </div>
-      <div class="flex-auto"></div>
+      <div class="map" id="map-1"></div>
+    </div>
+    <div class="flex vh100">
+      <div class="map" id="map-2"></div>
+      <div class="white flex flex-column flex-center flex-auto" id="venue-detail">
+        <div class="flex-auto"></div>
+        <div class="flex flex-column flex-wrap">
+          <div>
+            <h2>Ceremony & Reception</h2>
+            <p>September 29th, 2018</p>
+            <p>Cocktail hour starts at 5pm</p>
+            <p>Ceremony at 6pm</p>
+            <p>Full-on revelry to follow</p>
+          </div>
+          <div>
+            <h2>Where</h2>
+            <h4>
+              Greenwood Park
+              <br/>
+              Brooklyn, NY
+            </h4>
+          </div>
+          <div class="m1">
+            <a class="btn" id="rsvp">RSVP</a>
+          </div>
+        </div>
+        <div class="flex-auto"></div>
+      </div>
     </div>
   </div>
 
@@ -54,7 +73,7 @@
     <div class="flex space-around">
       {% for place in accomodations %}
         <div class="white flex-center flex-wrap m1">
-          <h2>{{place.name}}</h2>
+          <h4>{{place.name}}</h4>
           <h4>
             {{place.address}}
             <br />
@@ -76,11 +95,12 @@
       <div class="flex-auto"></div>
       <div class="flex-wrap">
         <h2>Registry</h2>
-        <h4>
+        <h4 class="m1">
           We don't have a registry!
           However, if you'd like to buy us a drink while we're on our honeymoon,
-          please feel free to help us out <a href="http://paypal.me/tomcodychris" target="_blank">here</a>
+          please feel free to help us out!
         </h4>
+        <a href="http://paypal.me/tomcodychris" target="_blank" class="btn">PayPal</a>
       </div>
       <div class="flex-auto"></div>
     </div>
