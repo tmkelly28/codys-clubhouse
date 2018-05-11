@@ -289,7 +289,7 @@ textarea {
   .map {display: none;}
   #accomodations {height: auto;}
   #accomodations div.flex {flex-direction: column;}
-  #venue-detail {height: 100vh;}
+  .venue-detail {height: 100vh;}
 }
 
 @media screen and (max-width: 680px), screen and (max-height: 325px) {
@@ -299,5 +299,5 @@ textarea {
 }
 
 @media screen and (max-height: 330px) {
-  #venue-detail {height: auto;}
+  .venue-detail {height: auto;}
 }
