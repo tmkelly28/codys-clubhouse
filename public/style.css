@@ -290,6 +290,7 @@ textarea {
   #accomodations {height: auto;}
   #accomodations div.flex {flex-direction: column;}
   .venue-detail {height: 100vh;}
+  .hide-sm {display: none;}
 }
 
 @media screen and (max-width: 680px), screen and (max-height: 325px) {
