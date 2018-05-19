@@ -289,7 +289,8 @@ textarea {
   .map {display: none;}
   #accomodations {height: auto;}
   #accomodations div.flex {flex-direction: column;}
-  .venue-detail {height: 100vh;}
+  #registry {height: auto;}
+  /*.venue-detail {height: 100vh;}*/
   .hide-sm {display: none;}
 }
 
