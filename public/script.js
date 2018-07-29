@@ -1,6 +1,7 @@
 (function ($) {
   var quips = [
     'Get married',
+    '#codysbigday',
     'Are really excited about filing jointly',
     'Lowered expectations, increased ABV',
     'Totally aren\'t being forced to do this',

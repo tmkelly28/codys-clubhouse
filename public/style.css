@@ -66,6 +66,13 @@ a:hover {color: burlywood;}
 .left {text-align: left;}
 .vh70 {height: 70vh;}
 .vh100 {height: 100vh;}
+.underline {
+  border-bottom: 1px solid white;
+  padding: 2px;
+}
+.underline:hover {
+  border-bottom: 1px solid burlywood;
+}
 
 /* flex */
 /* based on: http://basscss.com/v7/docs/flex-object/ */

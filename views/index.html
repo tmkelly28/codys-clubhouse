@@ -112,6 +112,15 @@
       {% for place in accomodations %}
         <div class="white flex-center flex-wrap m1">
           <h4>{{place.name}}</h4>
+          {% if loop.index == 1 %}
+          <a 
+            class="underline" 
+            href="https://book.passkey.com/event/49595288/owner/13490/home?mobile=true&dw=375"
+            target="_blank"
+          >
+            Reserve with wedding block
+          </a>
+          {% endif %}
           <h4>
             {{place.address}}
             <br />

@@ -1,6 +1,6 @@
 module.exports = [
   {
-    name: 'New York Marriott at the Brooklyn Bridge (wedding block)',
+    name: 'New York Marriott at the Brooklyn Bridge',
     address: '333 Adams St',
     city: 'Brooklyn, NY',
     phone: '(718)-246-7000',
